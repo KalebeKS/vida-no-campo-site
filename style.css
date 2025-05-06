@@ -5,11 +5,11 @@ body {
   padding: 0;
   background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
   color: #2e7d32;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Estilo do cabeçalho */
@@ -18,7 +18,8 @@ header {
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  max-width: 500px;
+  max-width: 600px;
+  margin: 40px auto;
 }
 
 /* Título */
@@ -34,7 +35,15 @@ h1 {
   margin-bottom: 30px;
 }
 
-/* Botão */
+/* Navegação com botões */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Botões de navegação */
 .botao {
   background-color: #66bb6a;
   color: white;
@@ -51,11 +60,17 @@ h1 {
   background-color: #388e3c;
 }
 
-main .texto {
-  padding: 30px;
-  max-width: 800px;
+/* Conteúdo principal */
+main {
+  padding: 20px;
+  max-width: 900px;
   margin: auto;
   text-align: left;
+}
+
+/* Texto nas páginas internas */
+main .texto {
+  padding: 30px;
   color: #2e7d32;
 }
 
@@ -76,18 +91,20 @@ form {
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   max-width: 500px;
-  margin: 0 auto;
+  margin: 40px auto;
+  text-align: left;
 }
 
 form label {
   font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
 }
 
 form input,
 form textarea {
   width: 100%;
   padding: 10px;
-  margin-top: 5px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 8px;
